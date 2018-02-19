@@ -19,8 +19,13 @@ export class ProductosService {
         this.cargando_producto= true;
         this.http.get('https://paginaweb-f5a9e.firebaseio.com/productos_idx.json').subscribe(res => {
                   console.log(res.json());
-                  this.productos = res.json();
-                  this.cargando_producto = false;
+                  setTimeout(() => {
+                    
+                    this.cargando_producto = false;
+                    this.productos = res.json();
+                    
+                  }, 1500);
+              
         });
    // }
   }
