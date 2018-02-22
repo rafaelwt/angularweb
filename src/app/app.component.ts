@@ -11,7 +11,7 @@ export class AppComponent {
 
   constructor( public _is: InformacionService, public _ps : ProductosService ){
 
-    console.log (_ps);
+    //console.log (_ps);
 
   }
 }

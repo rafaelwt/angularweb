@@ -8,11 +8,17 @@ export class ProductosService {
 
   constructor(private http:Http) { 
 
-    this.cargarProducto();
+    this.cargarProductos();
 
   }
 
-  public cargarProducto(){
+  public cargarProducto (cod :string){
+    
+    return this.http.get(`https://paginaweb-f5a9e.firebaseio.com/productos/${cod}.json`);
+
+  }
+
+  public cargarProductos(){
 
  //   if (this.produtos.length === 0){
 
