@@ -1,3 +1,26 @@
-<p>
-  search works!
-</p>
+
+  <section class="ae-container-fluid ae-container-fluid--inner rk-portfolio animated fadeIn">
+
+
+      <!-- 1 -->
+      
+      <div align="center" *ngIf= "_ps.cargando_producto">
+          <app-loading></app-loading>
+      
+      </div>
+      
+        
+          <div *ngIf = "_ps.productos_filtrado.length >0 && !_ps.cargando_producto"  class="ae-masonry ae-masonry-md-2 ae-masonry-xl-4 animated fadeIn">  
+            <a *ngFor="let producto of _ps.productos_filtrado"
+            [routerLink]="['/producto',producto.cod]"  
+            class="rk-item ae-masonry__item"><img src="assets/productos/{{ producto.url }}.jpg" alt="">
+              <div class="item-meta">
+                <h2>{{ producto.titulo}}</h2>
+                <p>{{ producto.categoria }}</p>
+              </div>
+            </a>
+              
+      
+          </div>
+        </section>
+      
