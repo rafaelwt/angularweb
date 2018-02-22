@@ -15,8 +15,8 @@ export class ProductoComponent   {
               private _ps : ProductosService  ) { 
 
     route.params.subscribe(parametros =>{
-        console.log(parametros);
-        console.log(parametros['id']);
+      //  console.log(parametros);
+      //  console.log(parametros['id']);
 
         _ps.cargarProducto(parametros['id'])
         .subscribe(res => {

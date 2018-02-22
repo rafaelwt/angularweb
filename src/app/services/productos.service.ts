@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import {Http} from '@angular/http';
-import { resolve } from 'dns';
-import { reject } from 'q';
+
 @Injectable()
 export class ProductosService {
 
@@ -18,8 +17,8 @@ export class ProductosService {
   public buscarProducto (termino:string){
 
 
-    console.log("Buscando producto");
-    console.log(this.productos.length);
+    //console.log("Buscando producto");
+    //console.log(this.productos.length);
 
     if (this.productos_filtrado.length === 0){
 
